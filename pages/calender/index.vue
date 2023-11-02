@@ -1,12 +1,20 @@
 <template>
   <div class="box">
-    <h1>{{ year }} 年 {{ month + 1 }} 月 {{ day }} 日</h1>
-    <h1>星期{{ weekMap[week].ch }}</h1>
-    <h1>{{ weekMap[week].en }}</h1>
+    <h1 class="mt60">
+      <span class="big">{{ year }}</span> 年 <span class="big">{{ month + 1 }}</span> 月
+      <span class="big">{{ day }}</span> 日
+    </h1>
+    <h1>
+      <span class="big">{{ weekMap[week].en }}</span> - 星期{{ weekMap[week].ch }}
+    </h1>
+    <div>
+      <img class="img" :src="img" alt="Do you believe in light?" />
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import img from "./automan.jpeg";
 const route = useRoute();
 
 const weekMap = {
@@ -31,5 +39,18 @@ const week = date.getDay();
   display: flex;
   text-align: center;
   flex-direction: column;
+}
+h1 {
+  font-size: 48px;
+}
+.mt60 {
+  margin-top: 160px;
+}
+.big {
+  font-size: 96px;
+}
+.img {
+  width: 400px;
+  object-fit: cover;
 }
 </style>
