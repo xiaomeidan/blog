@@ -12,7 +12,7 @@
     "generate:gh-win": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
     "build:gh-linux": "DEPLOY_ENV=GH_PAGES nuxt build",
     "generate:gh-linux": "DEPLOY_ENV=GH_PAGES nuxt generate",
-    "deploy": "push-dir --dir=dist --branch=master --cleanup"
+    "deploy": "push-dir --dir=dist --branch=main --cleanup"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
@@ -23,4 +23,3 @@
     "vue-router": "^4.2.5"
   }
 }
-
