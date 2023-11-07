@@ -20,4 +20,5 @@ export default defineNuxtConfig({
   generate: {
     subFolders: false,
   },
+  target: "server",
 }) as NuxtConfig;
