@@ -7,6 +7,7 @@
     <h1>
       <span class="big">{{ weekMap[week].en }}</span> - 星期{{ weekMap[week].ch }}
     </h1>
+    <h1>{{ sec }}</h1>
     <div>
       <img class="img" :src="img" alt="Do you believe in light?" />
     </div>
@@ -14,24 +15,28 @@
 </template>
 
 <script setup lang="ts">
-import img from "./automan.jpeg";
+import img from "~/assets/automan.jpeg";
 const route = useRoute();
 
 const weekMap = {
-  0: { ch: "一", en: "Monday" },
-  1: { ch: "二", en: "Tuesday" },
-  2: { ch: "三", en: "Wednesday" },
-  3: { ch: "四", en: "Thursday" },
-  4: { ch: "五", en: "Friday" },
-  5: { ch: "六", en: "Saturday" },
-  6: { ch: "七", en: "Sunday" },
+  1: { ch: "一", en: "Monday" },
+  2: { ch: "二", en: "Tuesday" },
+  3: { ch: "三", en: "Wednesday" },
+  4: { ch: "四", en: "Thursday" },
+  5: { ch: "五", en: "Friday" },
+  6: { ch: "六", en: "Saturday" },
+  7: { ch: "七", en: "Sunday" },
 };
 
 const date = new Date();
-const year = date.getFullYear();
-const month = date.getMonth();
-const day = date.getDate();
-const week = date.getDay();
+const year = ref(date.getFullYear());
+const month = ref(date.getMonth());
+const day = ref(date.getDate());
+const week = ref(date.getDay());
+const sec = ref(date.getSeconds());
+setInterval(() => {
+  sec.value = (sec.value + 1) % 60;
+}, 1000);
 </script>
 
 <style scoped>
