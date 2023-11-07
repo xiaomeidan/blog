@@ -17,4 +17,7 @@ export default defineNuxtConfig({
     defineModel: true,
     propsDestructure: true,
   },
+  generate: {
+    subFolders: false,
+  },
 }) as NuxtConfig;
