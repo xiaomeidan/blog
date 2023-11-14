@@ -1,8 +1,3 @@
 <template>
-  <!-- <router-view></router-view> -->
-  <Birthday />
+  <router-view></router-view>
 </template>
-
-<script setup lang="ts">
-import Birthday from 'src/views/birthday/Index.vue';
-</script>
