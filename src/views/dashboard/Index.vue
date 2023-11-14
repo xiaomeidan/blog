@@ -14,4 +14,4 @@
   </div>
 </template>
 
-<script lang="ts" name="ViewsDashboard"></script>
+<script lang="ts" setup name="ViewsDashboard"></script>

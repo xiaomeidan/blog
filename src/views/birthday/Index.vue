@@ -1,7 +1,7 @@
 <template>
   <div class="w-full h-full bg-black" :style="{ height: screenHeight + 'px' }">
     <img :src="imgSrc" class="img" />
-    <h1>Happy Birthday</h1>
+    <h1>Happy 6th Birthday</h1>
     <canvas id="birthday"></canvas>
   </div>
 </template>
@@ -14,9 +14,7 @@ const screenHeight = ref(0);
 onMounted(init);
 
 // helper functions
-const PI2 = Math.PI * 2;
-const random = (min, max) => (Math.random() * (max - min + 1) + min) | 0;
-const timestamp = (_) => new Date().getTime();
+const timestamp = () => new Date().getTime();
 
 function init() {
   screenHeight.value = window.innerHeight;
