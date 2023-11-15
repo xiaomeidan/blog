@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full h-full bg-black" :style="{ height: screenHeight + 'px' }">
+  <div class="bg-black">
     <img :src="imgSrc" class="img" />
-    <h1>Happy 6th Birthday</h1>
+    <h1>Happy 6th Birthday<br />游 梓 坚</h1>
     <canvas id="birthday"></canvas>
   </div>
 </template>
@@ -18,7 +18,6 @@ const timestamp = () => new Date().getTime();
 
 function init() {
   screenHeight.value = window.innerHeight;
-  console.log('height --', screenHeight.value);
   setCanvas(document.getElementById('birthday'));
 
   let then = timestamp();
@@ -58,5 +57,6 @@ h1 {
   position: fixed;
   bottom: 0;
   right: 30px;
+  width: 70%;
 }
 </style>

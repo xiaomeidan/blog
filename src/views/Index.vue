@@ -1,5 +1,5 @@
 <template>
-  <div :class="themeType">
+  <div>
     <Disclosure as="nav" class="bg-gray-100 dark:bg-gray-800" v-slot="{ open }">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
@@ -113,10 +113,10 @@ const tabDarkColor =
   'dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-white';
 
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Language', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false }
+  { name: 'Dashboard', href: '/dashboard', current: true },
+  { name: 'Blog', href: '/blog', current: false },
+  { name: 'Birthday', href: '/birthday', current: false },
+  { name: 'Calendar', href: '/calendar', current: false }
 ];
 
 function toggleTheme() {
