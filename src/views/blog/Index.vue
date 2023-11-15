@@ -2,4 +2,4 @@
   <div class="about">Language</div>
 </template>
 
-<script lang="ts" name="ViewsLanguage"></script>
+<script lang="ts" setup name="ViewsLanguage"></script>
