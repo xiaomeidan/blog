@@ -2,7 +2,14 @@
 export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
-    extend: {}
+    extend: {
+      borderWidth: {
+        40: '40px'
+      },
+      fontSize: {
+        '22xl': '22rem'
+      }
+    }
   },
   plugins: [],
   darkMode: 'class' // or 'media' or 'class',
