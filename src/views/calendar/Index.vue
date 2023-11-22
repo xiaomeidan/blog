@@ -103,7 +103,7 @@ interface Forecast {
 const day = ref(dayjs());
 const adcode = ref('');
 const city = ref('');
-const wData = ref(null);
+const wData = ref<object>({});
 const forecast = ref<Forecast[]>([]);
 let AMap: any = null;
 
